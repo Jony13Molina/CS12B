@@ -1,18 +1,27 @@
------------------------------------------------------------------------------
-Jonathan Molina
-CS12B
-jomolina
------------------------------------------------------------------------------
+------------------------------------------------------
+Jonathan Molina 
+CS12 B jomolina
+PA5
+------------------------------------------------------
 
 
------------------------------------------------------------------------------
-Files
------------------------------------------------------------------------------
-1.Queue.java
-2.QueEmptyException.java
-3.QueueTest.java
-4.QueueInterface.java
+
+-------------------------------------------------------
+Contents
+-------------------------------------------------------
+1.README
+2.Dictionary.h
+3.DictonaryTest.c
+4.DictionaryClient.c
 5.Makefile
-6.Simulation.java
-7.README
-8.Job.java
+6.Dictionary.c
+
+
+
+
+--------------------------------------------------------
+Special Notes:
+--------------------------------------------------------
+To compile do make then to run DictionaryClient 
+testHashInput and thats it. This was a good year.
+Good Luck On finals to everyone, Im out.

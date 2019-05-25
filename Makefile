@@ -1,29 +1,24 @@
-#------------------------------------------------------------
-#Just A Makefile with Macros
-#-----------------------------------------------------------
 
+#------------------------------------------------------------------------------
+#Makefile for DictionaryClient.c with macros
+#------------------------------------------------------------------------------
 
+FLAGS   = -std=c99 -Wall
+SOURCES = Dictionary.c DictionaryClient2.c
+OBJECTS = Dictionary.o DictionaryClient2.o
+HEADERS = Dictionary.h
+EXEBIN  = DictionaryClient2
 
+all: $(EXEBIN)
 
-JAVAC      = javac 
-MAINCLASS  = Simulation
-JAVASRC    = $(wildcard *.java)
-SOURCES    = $(JAVASRC) makefile README
-CLASSES    = $(patsubst %.java, %.class, $(JAVASRC))
-JARCLASSES = $(patsubst %.class, %*.class, $(CLASSES))
-JARFILE    = $(MAINCLASS) 
+$(EXEBIN) : $(OBJECTS) $(HEADERS)
+	gcc -o $(EXEBIN) $(OBJECTS)
 
+$(OBJECTS) : $(SOURCES) $(HEADERS)
+	gcc -c $(FLAGS) $(SOURCES)
 
-all: $(JARFILE)
+clean :
+	rm -f $(EXEBIN) $(OBJECTS)
 
-$(JARFILE): $(CLASSES)
-	echo Main-class: $(MAINCLASS) > Manifest
-	jar cvfm $(JARFILE) Manifest $(JARCLASSES)
-	chmod +x $(JARFILE)
-	rm Manifest
-
-%.class: %.java
-	$(JAVAC) $<
-
-clean:
-	rm *.class $(JARFILE)
+check:
+	valgrind --leak-check=full $(EXEBIN) 
