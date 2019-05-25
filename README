@@ -1,20 +1,29 @@
-/*==============================*/
-/*Jonathan Molina               */
-/*jomolina                      */ 
-/*CS12B Pa2                     */ 
-/*==============================*/
+=====================================================
 
-===================================
-Table of Contents
-===================================
-1. Search.java: program
-2. REAME
-3. Makefile compiles and runs program
+Read Me With Macros
+Jonathan Molina 
+CS12B PA3
+jomolina
+=====================================================
+
+-----------------------------------------------------
+Contents
+-----------------------------------------------------
+1.README
+2.Dictionary.java
+3.KeyCollisionException.java
+4.KeyNotFoundException.java
+5.DictionaryInterface.java
+6.DictionaryClient.java
+7.Makefile
+8.DictionaryTest.java
 
 
-====================================
-Special Notes
-====================================
-to compile and run on unix time share
-do make then type Search file1 key 
-happy dictinary.
+-------------------------------------------------------
+Special Notes:
+-------------------------------------------------------
+Just Compile as usual. Compile either Dictionary.java to 
+see all different test done on the program.
+Or compile DictionaryClient.java to see the output of the
+program. Dictionary.java contains all methods and the file 
+interface all methods implemented on Dictionary.

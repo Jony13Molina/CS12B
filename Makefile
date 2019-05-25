@@ -1,28 +1,26 @@
-#===============================#
-#Makefile with Macros           #
-#===============================#
+#------------------------------------------------------------------------------
+#   Makefile for CMPS 12B pa3
+#------------------------------------------------------------------------------
 
+JAVAC      = javac 
+MAINCLASS  = DictionaryClient
+JAVASRC    = $(wildcard *.java)
+SOURCES    = $(JAVASRC) makefile README
+CLASSES    = $(patsubst %.java, %.class, $(JAVASRC))
+JARCLASSES = $(patsubst %.class, %*.class, $(CLASSES))
+JARFILE    = $(MAINCLASS) 
 
-JAVASRC		= Search.java
-SOURCES		= README Makefile $(JAVASRC)
-MAINCLASS	= Search
-CLASSES		= Search.class
-JARFILE		= Search
-SUBMIT		= submit cmps012b-pt.s15 pa2
 
 all: $(JARFILE)
 
 $(JARFILE): $(CLASSES)
 	echo Main-class: $(MAINCLASS) > Manifest
-	jar cvfm $(JARFILE) Manifest $(CLASSES)
-	rm Manifest
+	jar cvfm $(JARFILE) Manifest $(JARCLASSES)
 	chmod +x $(JARFILE)
+	rm Manifest
 
-$(CLASSES): $(JAVASRC)
-	javac -Xlint $(JAVASRC)
+%.class: %.java
+	$(JAVAC) $<
 
 clean:
-	rm $(CLASSES) $(JARFILE)
-
-submit: $(SOURCES)
-	$(SUBMIT) $(SOURCES)  
+	rm -f *.class $(JARFILE)
