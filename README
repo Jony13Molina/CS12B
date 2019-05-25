@@ -1,0 +1,36 @@
+/*===========================================*/
+/*Jonathan Molina                            */ 
+/*jomolina CS12B                             */  
+/*===========================================*/
+
+=============================================
+Program 1
+=============================================
+//////////////////////////////////////////////
+
+Table of Contents : 
+
+
+1)Makefile :  the jar file that compiles and runs the program.
+2)README   :  the file that indicates all the other files being submitted.
+3)Extrema.java : The program that calculates the max and min in the array using recursion.
+
+
+/////////////////////////////////////////////
+
+
+==============================================
+Special Notes:
+==============================================
+
+///////////////////////////////////////////////
+How to Run The Program:
+
+just compile and run as usual no user input is 
+needed for this program. The program simply prints
+ min and max using recursion.
+
+the other files do not require anything else either.
+
+//////////////////////////////////////////////////
+
