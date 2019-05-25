@@ -1,9 +1,12 @@
-#------------------------------------------------------------------------------
-#   Makefile for CMPS 12B pa3
-#------------------------------------------------------------------------------
+#------------------------------------------------------------
+#Just A Makefile with Macros
+#-----------------------------------------------------------
+
+
+
 
 JAVAC      = javac 
-MAINCLASS  = DictionaryClient
+MAINCLASS  = Simulation
 JAVASRC    = $(wildcard *.java)
 SOURCES    = $(JAVASRC) makefile README
 CLASSES    = $(patsubst %.java, %.class, $(JAVASRC))
@@ -23,4 +26,4 @@ $(JARFILE): $(CLASSES)
 	$(JAVAC) $<
 
 clean:
-	rm -f *.class $(JARFILE)
+	rm *.class $(JARFILE)

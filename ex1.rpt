@@ -1,0 +1,10 @@
+REPORT FILE: ex1rpt.
+3 Jobs:
+(2, 2, *)
+(3, 4, *)
+(5, 6, *)
+
+
+********************************************
+1 PROCESSOR: totalWait = 4 maxWait = 3 averageWait = 1.3333334
+2 PROCESSOR: totalWait = 4 maxWait = 3 averageWait = Infinity
